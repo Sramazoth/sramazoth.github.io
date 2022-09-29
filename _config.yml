@@ -5,14 +5,14 @@ description: >-
   Random personnal blog
 lang: en-US
 timezone:  Europe/Paris
-repo: https://github.com/SuzuyaSora/sramazoth.github.io # site repo [optional]
+repo: https://github.com/Sramazoth/sramazoth.github.io # site repo [optional]
 data-theme: dark # default theme "dark" | "light"
 discus-identifier: sramazoth # replace with your disqus shortname
 
 author:
   name: sramazoth
   bio: Cybersecurity & Scans
-  userpicture: https://github.com/SuzuyaSora/sramazoth.github.io/pang.jpg
+  userpicture: https://github.com/Sramazoth/sramazoth.github.io/pang.jpg
   username: sramazoth # general username
   github: sramazoth # github username
   twitter: sramazoth # twitter username
