@@ -5,14 +5,14 @@ description: >-
   Random personnal blog
 lang: en-US
 timezone:  Europe/Paris
-repo: https://github.com/SuzuyaSora/sramazoth.github.io # site repo [optional]
+repo: https://github.com/Sramazoth/sramazoth.github.io # site repo [optional]
 data-theme: dark # default theme "dark" | "light"
 discus-identifier: sramazoth # replace with your disqus shortname
 
 author:
   name: sramazoth
   bio: Cybersecurity & Scans
-  userpicture: https://github.com/SuzuyaSora/sramazoth.github.io/pang.jpg
+  userpicture: https://github.com/Sramazoth/sramazoth.github.io/pang.jpg
   username: sramazoth # general username
   github: sramazoth # github username
   twitter: sramazoth # twitter username
@@ -22,8 +22,9 @@ author:
 googlewebfonts: family=Play:wght@400;700&family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,300;1,400;1,500;1,600;1,700;1,900
 
 # URL settings
-url: "https://sramazoth.github.io" # Domain Name of host. [username].github.io for github pages
-baseurl: "/" # sub folder for jekyll site. only if jekyll site not in root of host. leave blank if not wishd. always add / in front.
+url: "sramazoth.github.io" # Domain Name of host. [username].github.io for github pages
+baseurl: # sub folder for jekyll site. only if jekyll site not in root of host. leave blank if not wishd. always add / in front.
+permalink: "sramazoth.github.io/"
 permalink: pretty
 
 # local
