@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: https://DavideBrie.github.io/sitemap.xml
+Sitemap: https://sramazoth.github.io/sitemap.xml
