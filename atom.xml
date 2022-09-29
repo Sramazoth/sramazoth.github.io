@@ -2,9 +2,9 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
  <title>Sramazoth</title>
- <link href="sramazoth.github.io/atom.xml" rel="self"/>
- <link href="sramazoth.github.io/"/>
- <updated>2022-09-29T15:03:16+02:00</updated>
+ <link href="sramazoth.github.io//atom.xml" rel="self"/>
+ <link href="sramazoth.github.io//"/>
+ <updated>2022-09-29T15:22:11+02:00</updated>
  <id>sramazoth.github.io</id>
  <author>
    <name>sramazoth</name>
@@ -14,7 +14,7 @@
  
  <entry>
    <title>Structured Data markup validation and testing tools</title>
-   <link href="sramazoth.github.io/2016/12/11/structured-data-markup-validation-and-testing-tools"/>
+   <link href="sramazoth.github.io//2016/12/11/structured-data-markup-validation-and-testing-tools"/>
    <updated>2016-12-11T00:00:00+01:00</updated>
    <id>sramazoth.github.io/2016/12/11/structured-data-markup-validation-and-testing-tools</id>
    <content type="html">&lt;p&gt;Lorem ipsum dolor amet tousled viral art party blue bottle single-origin coffee cardigan, selvage man braid helvetica. Banh mi taxidermy meditation microdosing. Selvage cornhole YOLO, small batch vexillologist raclette VHS prism sustainable 8-bit ugh semiotics letterpress disrupt pop-up. Celiac shabby chic ugh, jianbing whatever kitsch tattooed edison bulb kogi irony etsy.&lt;/p&gt;
@@ -31,7 +31,7 @@
  
  <entry>
    <title>Top monospaced fonts for coding</title>
-   <link href="sramazoth.github.io/2016/11/27/top-monospaced-fonts-for-coding"/>
+   <link href="sramazoth.github.io//2016/11/27/top-monospaced-fonts-for-coding"/>
    <updated>2016-11-27T00:00:00+01:00</updated>
    <id>sramazoth.github.io/2016/11/27/top-monospaced-fonts-for-coding</id>
    <content type="html">&lt;p&gt;Lorem ipsum dolor amet tousled viral art party blue bottle single-origin coffee cardigan, selvage man braid helvetica. Banh mi taxidermy meditation microdosing. Selvage cornhole YOLO, small batch vexillologist raclette VHS prism sustainable 8-bit ugh semiotics letterpress disrupt pop-up. Celiac shabby chic ugh, jianbing whatever kitsch tattooed edison bulb kogi irony etsy.&lt;/p&gt;
@@ -48,7 +48,7 @@
  
  <entry>
    <title>Places where you can learn how to code</title>
-   <link href="sramazoth.github.io/2015/07/31/places-where-you-can-learn-how-to-code"/>
+   <link href="sramazoth.github.io//2015/07/31/places-where-you-can-learn-how-to-code"/>
    <updated>2015-07-31T00:00:00+02:00</updated>
    <id>sramazoth.github.io/2015/07/31/places-where-you-can-learn-how-to-code</id>
    <content type="html">&lt;p&gt;Lorem ipsum dolor amet tousled viral art party blue bottle single-origin coffee cardigan, selvage man braid helvetica. Banh mi taxidermy meditation microdosing. Selvage cornhole YOLO, small batch vexillologist raclette VHS prism sustainable 8-bit ugh semiotics letterpress disrupt pop-up. Celiac shabby chic ugh, jianbing whatever kitsch tattooed edison bulb kogi irony etsy.&lt;/p&gt;
@@ -65,7 +65,7 @@
  
  <entry>
    <title>CSS hacks you may not know</title>
-   <link href="sramazoth.github.io/2014/05/12/css-hacks-you-may-not-know"/>
+   <link href="sramazoth.github.io//2014/05/12/css-hacks-you-may-not-know"/>
    <updated>2014-05-12T00:00:00+02:00</updated>
    <id>sramazoth.github.io/2014/05/12/css-hacks-you-may-not-know</id>
    <content type="html">&lt;p&gt;Lorem ipsum dolor amet tousled viral art party blue bottle single-origin coffee cardigan, selvage man braid helvetica. Banh mi taxidermy meditation microdosing. Selvage cornhole YOLO, small batch vexillologist raclette VHS prism sustainable 8-bit ugh semiotics letterpress disrupt pop-up. Celiac shabby chic ugh, jianbing whatever kitsch tattooed edison bulb kogi irony etsy.&lt;/p&gt;
