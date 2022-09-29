@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: https://sramazoth.github.io/sitemap.xml
+Sitemap: sramazoth.github.io/sitemap.xml
