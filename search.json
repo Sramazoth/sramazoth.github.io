@@ -1,30 +1,12 @@
 [
   
     {
-      "title"    : "Structured Data markup validation and testing tools",
-      "description" : "Schema.org structured data helps you to highlight specific information for search engines and to improve the way your page displays in SERPs",
+      "title"    : "Scan tier list",
+      "description" : "A list of good scans",
       "category" : "",
-      "tags"     : "seo",
-      "url"      : "/2016/12/11/structured-data-markup-validation-and-testing-tools",
-      "date"     : "2016-12-11 00:00:00 +0100"
-    } ,
-  
-    {
-      "title"    : "Top monospaced fonts for coding",
-      "description" : "Take a look at the fonts in this post that can make your text editor or terminal emulator look little bit nicer",
-      "category" : "",
-      "tags"     : "coding",
-      "url"      : "/2016/11/27/top-monospaced-fonts-for-coding",
-      "date"     : "2016-11-27 00:00:00 +0100"
-    } ,
-  
-    {
-      "title"    : "Places where you can learn how to code",
-      "description" : "There many different options to learn to code online, so in this article, find places you can learn to code",
-      "category" : "",
-      "tags"     : "coding",
-      "url"      : "/2015/07/31/places-where-you-can-learn-how-to-code",
-      "date"     : "2015-07-31 00:00:00 +0200"
+      "tags"     : "scan, list",
+      "url"      : "/2022/09/15/scan-tier-list",
+      "date"     : "2022-09-15 00:00:00 +0200"
     } ,
   
     {

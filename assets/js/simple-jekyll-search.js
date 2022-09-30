@@ -354,6 +354,8 @@ var _$src_8 = {};
       exclude: options.exclude
     })
 
+    console.log(options.json)
+
     if (_$utils_9.isJSON(options.json)) {
       initWithJSON(options.json)
     } else {
