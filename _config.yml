@@ -12,7 +12,6 @@ discus-identifier: sramazoth # replace with your disqus shortname
 author:
   name: sramazoth
   bio: Cybersecurity & Scans
-  userpicture: https://github.com/Sramazoth/sramazoth.github.io/pang.jpg
   username: sramazoth # general username
   github: sramazoth # github username
   twitter: sramazoth # twitter username
@@ -74,6 +73,12 @@ defaults:
       path: ""
     values:
       layout: "default"
+  -
+    scope:
+      path: ""
+      type: "errors"
+    values:
+      layout: "error"
   -
     scope:
       path: ""
