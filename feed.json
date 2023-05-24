@@ -17,19 +17,19 @@
 "items": [
     
         {
-            "id": "sramazoth.github.io/2023/05/27/little-challenge-to-reverse",
+            "id": "sramazoth.github.io/2023/05/20/little-challenge-to-reverse",
             "title": "Little challenge to reverse",
             "summary": "This is a basic `crack me` binary example to reverse.",
             "content_text": "The code has 5 functions :  main : main function called when binary is executed.  jacky_tunning_banniere : do nothing but showing a cool banner at binary launch.  uncipher_file : will uncipher a file with the secret_key (hardcoded :p).  est_ce_une_bonne_cle : check whether or not the key is correct.  regex_match : function to use regex (totally not taken online).Binary has some options available, but not given that easily (strings).If you want to reverse the binary, the function est_ce_une_bonne_cle is what will be the most interesting.",
             "content_html": "<p>The code has 5 functions :</p><ol>  <li><code class=\"language-plaintext highlighter-rouge\">main</code> : main function called when binary is executed.</li>  <li><code class=\"language-plaintext highlighter-rouge\">jacky_tunning_banniere</code> : do nothing but showing a <em>cool</em> banner at binary launch.</li>  <li><code class=\"language-plaintext highlighter-rouge\">uncipher_file</code> : will uncipher a file with the <code class=\"language-plaintext highlighter-rouge\">secret_key</code> (hardcoded :p).</li>  <li><code class=\"language-plaintext highlighter-rouge\">est_ce_une_bonne_cle</code> : check whether or not the key is correct.</li>  <li><code class=\"language-plaintext highlighter-rouge\">regex_match</code> : function to use regex (<em>totally not taken online</em>).</li></ol><p>Binary has some options available, but not given that <em>easily</em> (<strong>strings</strong>).</p><p>If you want to reverse the binary, the function <code class=\"language-plaintext highlighter-rouge\">est_ce_une_bonne_cle</code> is what will be the most interesting.</p>",
-            "url": "sramazoth.github.io/2023/05/27/little-challenge-to-reverse",
+            "url": "sramazoth.github.io/2023/05/20/little-challenge-to-reverse",
             
             
             
             "tags": ["c","reverse"],
             
-            "date_published": "2023-05-27T00:00:00+02:00",
-            "date_modified": "2023-05-27T00:00:00+02:00",
+            "date_published": "2023-05-20T00:00:00+02:00",
+            "date_modified": "2023-05-20T00:00:00+02:00",
             
                 "author":  {
                 "name": "sramazoth",

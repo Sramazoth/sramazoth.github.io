@@ -4,7 +4,7 @@
  <title>Sramazoth</title>
  <link href="sramazoth.github.io/atom.xml" rel="self"/>
  <link href="sramazoth.github.io/"/>
- <updated>2023-05-24T16:55:03+02:00</updated>
+ <updated>2023-05-24T17:03:23+02:00</updated>
  <id>sramazoth.github.io</id>
  <author>
    <name>sramazoth</name>
@@ -14,9 +14,9 @@
  
  <entry>
    <title>Little challenge to reverse</title>
-   <link href="sramazoth.github.io/2023/05/27/little-challenge-to-reverse"/>
-   <updated>2023-05-27T00:00:00+02:00</updated>
-   <id>sramazoth.github.io/2023/05/27/little-challenge-to-reverse</id>
+   <link href="sramazoth.github.io/2023/05/20/little-challenge-to-reverse"/>
+   <updated>2023-05-20T00:00:00+02:00</updated>
+   <id>sramazoth.github.io/2023/05/20/little-challenge-to-reverse</id>
    <content type="html">&lt;p&gt;The code has 5 functions :&lt;/p&gt;
 &lt;ol&gt;
   &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;main&lt;/code&gt; : main function called when binary is executed.&lt;/li&gt;
