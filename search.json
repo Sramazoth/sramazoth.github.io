@@ -1,6 +1,15 @@
 [
   
     {
+      "title"    : "Setting and using scapy mitm",
+      "description" : "How to setup and use a mitm with scapy.",
+      "category" : "",
+      "tags"     : "network, python",
+      "url"      : "/2024/03/11/setting-and-using-scapy-mitm",
+      "date"     : "2024-03-11 00:00:00 +0100"
+    } ,
+  
+    {
       "title"    : "Root Galaxy A14",
       "description" : "How to root a Galaxy A14 and use frida on it.",
       "category" : "",

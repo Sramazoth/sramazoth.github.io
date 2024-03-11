@@ -4,13 +4,111 @@
  <title>Sramazoth</title>
  <link href="sramazoth.github.io/atom.xml" rel="self"/>
  <link href="sramazoth.github.io/"/>
- <updated>2024-03-11T15:24:35+01:00</updated>
+ <updated>2024-03-11T16:50:14+01:00</updated>
  <id>sramazoth.github.io</id>
  <author>
    <name>sramazoth</name>
    <email>suzuya.sora@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>Setting and using scapy mitm</title>
+   <link href="sramazoth.github.io/2024/03/11/setting-and-using-scapy-mitm"/>
+   <updated>2024-03-11T00:00:00+01:00</updated>
+   <id>sramazoth.github.io/2024/03/11/setting-and-using-scapy-mitm</id>
+   <content type="html">&lt;h1 id=&quot;requirements&quot;&gt;requirements&lt;/h1&gt;
+&lt;ol&gt;
+  &lt;li&gt;two network interfaces:
+    &lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ip a
+ 1: lo: 
+     &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+	    
+ 2: eth0: &amp;lt;NO-CARRIER,BROADCAST,MULTICAST,UP&amp;gt; mtu 1500 qdisc fq_codel state DOWN group default qlen 1000
+     &lt;span class=&quot;nb&quot;&gt;link&lt;/span&gt;/ether 50:81:40:78:96:ac brd ff:ff:ff:ff:ff:ff
+ 3: eth1: &amp;lt;NO-CARRIER,BROADCAST,MULTICAST,UP&amp;gt; mtu 1500 qdisc fq_codel state DOWN group default qlen 1000
+     &lt;span class=&quot;nb&quot;&gt;link&lt;/span&gt;/ether 50:81:40:88:85:bd brd ff:ff:ff:ff:ff:ff
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;scapy&lt;/code&gt; is installed and working (&lt;em&gt;already done if using kali&lt;/em&gt;)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;two equipments talking to each other using a &lt;strong&gt;physical network&lt;/strong&gt; (&lt;em&gt;server and client on the schema&lt;/em&gt;), I’m not doing wireless mitm here&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;(bonus) it is needed to disable &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;NetworkManager&lt;/code&gt; to avoid interfaces to go off:
+    &lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;systemctl disable NetworkManager
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;systemctl stop NetworkManager
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;schema&quot;&gt;schema&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&quot;/images/mitm.png&quot; alt=&quot;mitm&quot; /&gt;
+(&lt;em&gt;I’m good at drawing garbage schemas&lt;/em&gt;)&lt;/p&gt;
+
+&lt;h1 id=&quot;physical-steps&quot;&gt;physical steps&lt;/h1&gt;
+&lt;ol&gt;
+  &lt;li&gt;disconnect the physical connections between the server and the client&lt;/li&gt;
+  &lt;li&gt;connect both the server and the client to the interfaces of the mitm equipment&lt;/li&gt;
+  &lt;li&gt;verify connectivity with both interfaces, it should be something like:
+    &lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ip a
+ 1: lo: 
+     &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+	    
+ 2: eth0: &amp;lt;BROADCAST,MULTICAST,UP,LOWER_UP&amp;gt; mtu 1500 qdisc fq_codel state UP group default qlen 1000
+     &lt;span class=&quot;nb&quot;&gt;link&lt;/span&gt;/ether 50:81:40:78:96:ac brd ff:ff:ff:ff:ff:ff
+ 3: eth1: &amp;lt;BROADCAST,MULTICAST,UP,LOWER_UP&amp;gt; mtu 1500 qdisc fq_codel state UP group default qlen 1000
+     &lt;span class=&quot;nb&quot;&gt;link&lt;/span&gt;/ether 50:81:40:88:85:bd brd ff:ff:ff:ff:ff:ff
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;software-steps&quot;&gt;software steps&lt;/h1&gt;
+&lt;ol&gt;
+  &lt;li&gt;write a script to use scapy mitm:
+```py
+#!/usr/bin/python&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;from scapy.all import *&lt;/p&gt;
+
+&lt;p&gt;def modifyClientResponse(pkt):&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# do stuff with packet
+
+return pkt
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;def serverToClient(pkt):
+	pkt.show()
+	return True # return packet without modification&lt;/p&gt;
+
+&lt;p&gt;def clientToServer(pkt):
+	pkt.show()
+	if UDP in pkt: # if packet has layer UDP send packet to packet modifier 
+		return modified_pkt
+	return True # return packet without modification&lt;/p&gt;
+
+&lt;p&gt;if &lt;strong&gt;name&lt;/strong&gt; == “&lt;strong&gt;main&lt;/strong&gt;”:
+	# interfaces, based on schema
+	interface_connected_to_server = “eth0”
+	interface_connected_to_client = “eth1”
+	bridge_and_sniff(
+		if1=interface_connected_to_server, 
+		if2=interface_connected_to_client, 
+		xfrm12=serverToClient, # function to call for packets coming from if1 to if1
+		xfrm21=clientToServer) # function to call for packets coming from if1 to if1&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;the mitm is now ready as we are using the function `bridge_and_sniff` ([official documentation](https://scapy.readthedocs.io/en/latest/api/scapy.sendrecv.html#scapy.sendrecv.bridge_and_sniff)), which simply get the packets and pass them as arguments to functions depending of the source interface
+
+2. launching the script with sudo rights:
+```sh
+sudo python_mitm.py
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;it should be working fine&lt;/p&gt;
+
+</content>
+ </entry>
  
  <entry>
    <title>Root Galaxy A14</title>
