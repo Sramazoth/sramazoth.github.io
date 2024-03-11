@@ -50,6 +50,7 @@ ip a
 
 # software steps
 1. write a script to use scapy mitm:
+
 ```py
 #!/usr/bin/python
 
@@ -81,6 +82,7 @@ if __name__ == "__main__":
 		xfrm12=serverToClient, # function to call for packets coming from if1 to if1
 		xfrm21=clientToServer) # function to call for packets coming from if1 to if1
 ```
+
 the mitm is now ready as we are using the function `bridge_and_sniff` ([official documentation](https://scapy.readthedocs.io/en/latest/api/scapy.sendrecv.html#scapy.sendrecv.bridge_and_sniff)), which simply get the packets and pass them as arguments to functions depending of the source interface
 
 2. launching the script with sudo rights:
