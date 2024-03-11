@@ -69,7 +69,7 @@ def serverToClient(pkt):
 def clientToServer(pkt):
 	pkt.show()
 	if UDP in pkt: # if packet has layer UDP send packet to packet modifier 
-		return modified_pkt
+		return modifyClientResponse(pkt)
 	return True # return packet without modification
 
 if __name__ == "__main__":
