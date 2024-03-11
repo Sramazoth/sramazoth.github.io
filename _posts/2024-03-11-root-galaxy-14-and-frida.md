@@ -9,8 +9,8 @@ tags: android
 # attention
 Le téléphone va être réinitialisé deux fois.
 Si le texte ne suffit pas:
-- https://www.youtube.com/watch?v=R8-UNyKA6aY : pour rooter le téléphone
-- https://www.youtube.com/watch?v=CHTfYBB-8n0 : pour désactiver l'OEM
+- [Root All Samsung Galaxy 2023 Android 13](https://www.youtube.com/watch?v=R8-UNyKA6aY) : pour rooter le téléphone
+- [Samsung Bootloder Unlock Oem Unlock Android 13/14](https://www.youtube.com/watch?v=CHTfYBB-8n0) : pour désactiver l'OEM
 
 # pré-requis
 ## télécharger le firmware
