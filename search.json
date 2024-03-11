@@ -1,6 +1,15 @@
 [
   
     {
+      "title"    : "Root Galaxy A14",
+      "description" : "How to root a Galaxy A14 and use frida on it.",
+      "category" : "",
+      "tags"     : "android",
+      "url"      : "/2024/03/11/root-galaxy-14-and-frida",
+      "date"     : "2024-03-11 00:00:00 +0100"
+    } ,
+  
+    {
       "title"    : "Little challenge to reverse",
       "description" : "This is a basic `crack me` binary example to reverse.",
       "category" : "",
@@ -11,7 +20,7 @@
   
     {
       "title"    : "Scan tier list",
-      "description" : "A list of good scans",
+      "description" : "A list of good scans.",
       "category" : "",
       "tags"     : "scan, list",
       "url"      : "/2022/09/15/scan-tier-list",

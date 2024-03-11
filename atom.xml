@@ -4,7 +4,7 @@
  <title>Sramazoth</title>
  <link href="sramazoth.github.io/atom.xml" rel="self"/>
  <link href="sramazoth.github.io/"/>
- <updated>2023-05-24T17:03:23+02:00</updated>
+ <updated>2024-03-11T15:24:35+01:00</updated>
  <id>sramazoth.github.io</id>
  <author>
    <name>sramazoth</name>
@@ -13,11 +13,155 @@
 
  
  <entry>
+   <title>Root Galaxy A14</title>
+   <link href="sramazoth.github.io/2024/03/11/root-galaxy-14-and-frida"/>
+   <updated>2024-03-11T00:00:00+01:00</updated>
+   <id>sramazoth.github.io/2024/03/11/root-galaxy-14-and-frida</id>
+   <content type="html">&lt;h1 id=&quot;attention&quot;&gt;attention&lt;/h1&gt;
+&lt;p&gt;Le téléphone va être réinitialisé deux fois.
+Si le texte ne suffit pas:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;https://www.youtube.com/watch?v=R8-UNyKA6aY : pour rooter le téléphone&lt;/li&gt;
+  &lt;li&gt;https://www.youtube.com/watch?v=CHTfYBB-8n0 : pour désactiver l’OEM&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;pré-requis&quot;&gt;pré-requis&lt;/h1&gt;
+&lt;h2 id=&quot;télécharger-le-firmware&quot;&gt;télécharger le firmware&lt;/h2&gt;
+&lt;p&gt;Télécharger le firmware similaire à celui du téléphone.
+Pour obtenir la verion exacte, aller sur le téléphone dans &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;paramètres-&amp;gt;à propos du téléphone-&amp;gt;informations sur le logiciel-&amp;gt;version de la bande base&lt;/code&gt;:&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;A145RXXU1AWD1&lt;/code&gt;
+https://samfw.com/firmware/SM-A145R/SFR/A145RXXU1AWD1&lt;/p&gt;
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;SAMFW.COM_SM-A145R_SFR_A145RXXU1AWD1_fac.zip
+unzip SAMFW.COM_SM-A145R_SFR_A145RXXU1AWD1_fac.zip
+
+ll
+&lt;span class=&quot;nt&quot;&gt;-rw-rw-r--&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt; 1 pouetpouet pouetpouet 6038610042 18 avril 21:00 AP_A145RXXU1AWD1_A145RXXU1AWD1_MQB64354567_REV00_user_low_ship_MULTI_CERT_meta_OS13.tar.md5
+&lt;span class=&quot;nt&quot;&gt;-rw-rw-r--&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt; 1 pouetpouet pouetpouet    4014192 18 avril 21:00 BL_A145RXXU1AWD1_A145RXXU1AWD1_MQB64354567_REV00_user_low_ship_MULTI_CERT.tar.md5
+&lt;span class=&quot;nt&quot;&gt;-rw-rw-r--&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt; 1 pouetpouet pouetpouet   32327789 18 avril 21:06 CP_A145RXXU1AWD1_CP24089644_MQB64354567_REV00_user_low_ship_MULTI_CERT.tar.md5
+&lt;span class=&quot;nt&quot;&gt;-rw-rw-r--&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt; 1 pouetpouet pouetpouet  507545703 18 avril 21:06 CSC_OXM_A145ROXM1AWD1_MQB64354567_REV00_user_low_ship_MULTI_CERT.tar.md5
+&lt;span class=&quot;nt&quot;&gt;-rw-rw-r--&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt; 1 pouetpouet pouetpouet        719  7 févr.  2022 _FirmwareInfo_Samfw.com.txt
+&lt;span class=&quot;nt&quot;&gt;-rw-rw-r--&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt; 1 pouetpouet pouetpouet  507504748 18 avril 21:06 HOME_CSC_OXM_A145ROXM1AWD1_MQB64354567_REV00_user_low_ship_MULTI_CERT.tar.md5
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;téléchager-les-outils-nécessaires&quot;&gt;téléchager les outils nécessaires&lt;/h2&gt;
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;adb frida android-sdk-build-tools-common
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;odin&lt;/code&gt; pour linux: https://forum.xda-developers.com/t/official-samsung-odin-v4-1-2-1-dc05e3ea-for-linux.4453423/&lt;/p&gt;
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;wget https://forum.xda-developers.com/attachments/odin-zip.5629297/
+unzip odin-zip
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;magisk&lt;/code&gt;: https://github.com/topjohnwu/Magisk/&lt;/p&gt;
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;wget https://github.com/topjohnwu/Magisk/releases/download/v26.2/Magisk-v26.2.apk
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;rooting&quot;&gt;rooting&lt;/h1&gt;
+&lt;h2 id=&quot;étape-1-préparer-le-fichier-ap-rooté&quot;&gt;étape 1: préparer le fichier AP rooté&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;brancher le téléphone au PC via USB&lt;/li&gt;
+  &lt;li&gt;copier l’apk &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;magisk&lt;/code&gt; et le fichier &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;AP_A145RXXU1AWD1_[ . . . ]_OS13.tar.md5&lt;/code&gt; sur le téléphone dans &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Téléchargements&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;installer l’apk &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;magisk&lt;/code&gt; en cliquant sur le fichier à partir du navigateur de fichiers sur le téléphone (il faut autoriser l’installation d’applications non vérifiées)&lt;/li&gt;
+  &lt;li&gt;lancer l’application &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;magisk&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;cliquer sur le bouton &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;installer&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;sélectionner le fichier AP&lt;/li&gt;
+  &lt;li&gt;quitter l’application quand le message &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;All done!&lt;/code&gt; apparaît&lt;/li&gt;
+  &lt;li&gt;copier depuis le PC le fichier généré (nom: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;magisk_patched-[ . . . ].tar&lt;/code&gt;) par &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;magisk&lt;/code&gt; sur le téléphone vers le PC&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;étape-2-débloquer-loem&quot;&gt;étape 2: débloquer l’OEM&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;activer le mode développeur sur le téléphone:
+    &lt;ul&gt;
+      &lt;li&gt;cliquer sept fois sur l’onglet &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;paramètres-&amp;gt;à propos du téléphone-&amp;gt;informations sur le logiciel-&amp;gt;numéro de version&lt;/code&gt; (un message apparaît quand le mode s’active)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;activer l’option &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;OEM unlocking&lt;/code&gt; dans &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;paramètres-&amp;gt;options de développement&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;activer l’option &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;USB debugging&lt;/code&gt; dans &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;paramètres-&amp;gt;options de développement&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;éteindre le téléphone&lt;/li&gt;
+  &lt;li&gt;brancher le téléphone au PC en USB&lt;/li&gt;
+  &lt;li&gt;appuyer et laisser enfoncé en même temps les boutons &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;volume haut et bas&lt;/code&gt; jusqu’à l’apparition d’un écran d’avertissement&lt;/li&gt;
+  &lt;li&gt;appuyer &lt;strong&gt;plusieurs secondes&lt;/strong&gt; sur le bouton &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;volume haut&lt;/code&gt; pour activer le mode débloqué (OEM)&lt;/li&gt;
+  &lt;li&gt;appuyer sur le bouton &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;volume haut&lt;/code&gt; pour confirmer&lt;/li&gt;
+  &lt;li&gt;activer l’option &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;USB debugging&lt;/code&gt; dans &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;paramètres-&amp;gt;options de développement&lt;/code&gt; une fois le téléphone réinitialisé&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;étape-3-installation-du-nouveau-firmware&quot;&gt;étape 3: installation du nouveau firmware&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;éteindre le téléphone&lt;/li&gt;
+  &lt;li&gt;brancher le téléphone au PC en USB&lt;/li&gt;
+  &lt;li&gt;appuyer et laisser enfoncé en même temps les boutons &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;volume haut et bas&lt;/code&gt; jusqu’à l’apparition d’un écran d’avertissement&lt;/li&gt;
+  &lt;li&gt;appuyer sur le bouton &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;volume haut&lt;/code&gt; pour continuer&lt;/li&gt;
+  &lt;li&gt;vérifier que le mode &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;OEM LOCK&lt;/code&gt; est sur &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;OFF (U)&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;lancer &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;odin&lt;/code&gt; sur le PC:
+    &lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;./odin4 &lt;span class=&quot;nt&quot;&gt;-a&lt;/span&gt; magisk_patched-[ &lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;.tar &lt;span class=&quot;nt&quot;&gt;-b&lt;/span&gt; BL_A145RXXU1AWD1_A145RXXU1AWD1_MQB64354567_REV00_user_low_ship_MULTI_CERT.tar.md5 &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; CP_A145RXXU1AWD1_CP24089644_MQB64354567_REV00_user_low_ship_MULTI_CERT.tar.md5 &lt;span class=&quot;nt&quot;&gt;-s&lt;/span&gt; CSC_OXM_A145ROXM1AWD1_MQB64354567_REV00_user_low_ship_MULTI_CERT.tar.md5
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;p&gt;(si tout se passe bien le PC devrait afficher un pourcentage de progression, et le téléphone une barre de progression)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;dérouler la procédure d’installation du téléphone&lt;/li&gt;
+  &lt;li&gt;copier l’apk &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;magisk&lt;/code&gt; sur le téléphone dans &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Téléchargements&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;installer l’apk &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;magisk&lt;/code&gt; en cliquant sur le fichier à partir du navigateur de fichiers sur le téléphone (il faut autoriser l’installation d’applications non vérifiées)&lt;/li&gt;
+  &lt;li&gt;lancer l’application &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;magisk&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;vérifier que le bouton &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;désinstaller magisk&lt;/code&gt; est présent, signe que le téléphone est rooté&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;étape-4-préparer-le-téléphone-pour-lutilisation-de-frida&quot;&gt;étape 4: préparer le téléphone pour l’utilisation de frida&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;sur le téléphone: activer le mode développeur :
+    &lt;ul&gt;
+      &lt;li&gt;cliquer sept fois sur l’onglet &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;paramètres-&amp;gt;à propos du téléphone-&amp;gt;informations sur le logiciel-&amp;gt;numéro de version&lt;/code&gt; (un message apparaît quand le mode s’active)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;sur le téléphone: activer l’option &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;USB debugging&lt;/code&gt; dans &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;paramètres-&amp;gt;options de développement&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;sur le PC: vérifier que la commande &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;adb devices&lt;/code&gt; renvoie bien &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[un id quelconque]    device&lt;/code&gt; et non pas &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[un id quelconque]    unauthorized&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;sur le PC:
+    &lt;ul&gt;
+      &lt;li&gt;déterminer l’architecture du téléphone:
+        &lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  adb shell getprop ro.product.cpu.abi
+  arm64-v8a
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+      &lt;/li&gt;
+      &lt;li&gt;télécharger le fichier &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;frida-server&lt;/code&gt; correspondant: https://github.com/frida/frida/releases (pour nous: https://github.com/frida/frida/releases/download/16.1.3/frida-server-16.1.3-android-arm64.xz)
+        &lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  wget https://github.com/frida/frida/releases/download/16.1.3/frida-server-16.1.3-android-arm64.xz
+  xz &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; frida-server-16.1.3-android-arm64.xz
+  &lt;span class=&quot;nb&quot;&gt;mv &lt;/span&gt;frida-server-16.1.3-android-arm64 frida-server
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+      &lt;/li&gt;
+      &lt;li&gt;pousser le fichier &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;frida-server&lt;/code&gt; sur le téléphone:
+        &lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  adb push frida-server /data/local/tmp
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+      &lt;/li&gt;
+      &lt;li&gt;lancer un shell avec &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;adb&lt;/code&gt;:
+        &lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  adb shell
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;sur le téléphone: autoriser le service &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;shell&lt;/code&gt; à être &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;superuser&lt;/code&gt;: activer &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;com.android.shell&lt;/code&gt; dans l’application &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;magisk&lt;/code&gt;: onglet &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Super-Utilisateur&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;sur le PC: exécuter le binaire &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;frida-server&lt;/code&gt;:
+    &lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  adb shell
+  su
+  &lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /data/local/tmp
+  &lt;span class=&quot;nb&quot;&gt;chmod &lt;/span&gt;755 frida-server
+  ./frida-server
+  &lt;span class=&quot;nb&quot;&gt;exit
+  exit
+  &lt;/span&gt;frida-ps &lt;span class=&quot;nt&quot;&gt;-U&lt;/span&gt;
+
+  &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;renvoie la liste des services sur le téléphone]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</content>
+ </entry>
+ 
+ <entry>
    <title>Little challenge to reverse</title>
    <link href="sramazoth.github.io/2023/05/20/little-challenge-to-reverse"/>
    <updated>2023-05-20T00:00:00+02:00</updated>
    <id>sramazoth.github.io/2023/05/20/little-challenge-to-reverse</id>
-   <content type="html">&lt;p&gt;The code has 5 functions :&lt;/p&gt;
+   <content type="html">&lt;p&gt;The challenge is available here: &lt;a href=&quot;https://github.com/Sramazoth/little_key_gen_challenge&quot;&gt;my github&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The code has 5 functions :&lt;/p&gt;
 &lt;ol&gt;
   &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;main&lt;/code&gt; : main function called when binary is executed.&lt;/li&gt;
   &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jacky_tunning_banniere&lt;/code&gt; : do nothing but showing a &lt;em&gt;cool&lt;/em&gt; banner at binary launch.&lt;/li&gt;
