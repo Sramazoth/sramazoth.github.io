@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Scan tier list
-description: A list of good scans
+description: A list of good scans.
 summary: A list of good scans.
 tags: scan list
 ---

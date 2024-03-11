@@ -6,6 +6,8 @@ summary: This is a basic `crack me` binary example to reverse.
 tags: c reverse
 ---
 
+The challenge is available here: [my github](https://github.com/Sramazoth/little_key_gen_challenge)
+
 The code has 5 functions : 
   1. `main` : main function called when binary is executed.
   1. `jacky_tunning_banniere` : do nothing but showing a *cool* banner at binary launch.
