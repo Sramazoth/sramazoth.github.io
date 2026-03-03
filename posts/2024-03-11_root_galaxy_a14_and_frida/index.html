@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        :root {
+            --accent-color: #FF4D4D;
+            --font-size: 1.1rem;
+        }
+    </style>
+
+    
+    
+    
+    
+    
+    
+
+    
+    <title>Root Galaxy A14</title>
+    <meta name="description" content="How to root a Galaxy A14 and use frida on it">
+    <meta name="keywords" content='android'>
+
+    <meta property="og:url" content="https://sramazoth.github.io/posts/2024-03-11_root_galaxy_a14_and_frida/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Root Galaxy A14">
+    <meta property="og:description" content="How to root a Galaxy A14 and use frida on it">
+    <meta property="og:image" content="https://sramazoth.github.io/images/pang.png">
+    <meta property="og:image:secure_url" content="https://sramazoth.github.io/images/pang.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Root Galaxy A14">
+    <meta name="twitter:description" content="How to root a Galaxy A14 and use frida on it">
+    <meta property="twitter:domain" content="https://sramazoth.github.io/posts/2024-03-11_root_galaxy_a14_and_frida/">
+    <meta property="twitter:url" content="https://sramazoth.github.io/posts/2024-03-11_root_galaxy_a14_and_frida/">
+    <meta name="twitter:image" content="https://sramazoth.github.io/images/pang.png">
+
+    
+    <link rel="canonical" href="https://sramazoth.github.io/posts/2024-03-11_root_galaxy_a14_and_frida/">
+
+    
+    <link rel="stylesheet" type="text/css" href="/css/normalize.min.css" media="print">
+
+    
+    <link rel="stylesheet" type="text/css" href="/css/main.min.css">
+
+    
+    <link id="dark-theme" rel="stylesheet" href="/css/dark.min.css">
+
+    
+    <script src="/js/bundle.min.a036ebe92c17ea3f0c07761c2135b82bec6f37c8efb7f49ddad1f28c22fc4769.js" integrity="sha256-oDbr6SwX6j8MB3YcITW4K&#43;xvN8jvt/Sd2tHyjCL8R2k="></script>
+
+    
+    
+        <link rel="stylesheet" href="/css/custom.css">
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const overlay = document.getElementById("overlay");
+            const overlayImg = document.getElementById("overlay-img");
+            const toc = document.getElementById("toc");
+
+            // When clicking a thumbnail
+            document.querySelectorAll(".thumbnail").forEach(img => {
+                img.addEventListener("click", function () {
+                    overlay.style.display = "flex";
+                    overlayImg.src = this.src;
+                    toc.style.display = "none";
+                });
+            });
+
+            // Close overlay when clicking anywhere
+            overlay.addEventListener("click", function () {
+                overlay.style.display = "none";
+                toc.style.display = "";
+            });
+        });
+    </script>
+
+    <div id="overlay">
+        <img id="overlay-img" src="" alt="preview">
+    </div>
+
+    
+    
+</head>
+<body>
+        <script>
+            
+            setThemeByUserPref();
+        </script><header class="header">
+    <nav class="header-nav">
+
+        
+        <div class="avatar">
+            <a href="https://sramazoth.github.io/">
+                <img src='/images/pang.png' alt="Little penguin with a bamboo hat and a bell on top of it">
+            </a>
+        </div>
+        
+
+        <div class="nav-title">
+            <a class="nav-brand" href="https://sramazoth.github.io/">sramazoth</a>
+        </div>
+
+        <div class="nav-links">
+            
+            <div class="nav-link">
+                <a href="https://sramazoth.github.io/posts/" aria-label="" > Posts </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://sramazoth.github.io/tags/" aria-label="" > Tags </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://github.com/sramazoth" aria-label="github" target="_blank"><span data-feather='github'></span>  </a>
+            </div>
+            
+
+            <span class="nav-icons-divider"></span>
+            <div class="nav-link dark-theme-toggle">
+                <span class="sr-only dark-theme-toggle-screen-reader-target">theme</span>
+                <a aria-hidden="true" role="switch">
+                    <span class="theme-toggle-icon" data-feather="moon"></span>
+                </a>
+            </div>
+
+            <div class="nav-link" id="hamburger-menu-toggle">
+                <span class="sr-only hamburger-menu-toggle-screen-reader-target">menu</span>
+                <a aria-checked="false" aria-labelledby="hamburger-menu-toggle" id="hamburger-menu-toggle-target" role="switch">
+                    <span data-feather="menu"></span>
+                </a>
+            </div>
+
+            
+            <ul class="nav-hamburger-list visibility-hidden">
+                
+                <li class="nav-item">
+                    <a href="https://sramazoth.github.io/posts/" > Posts </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://sramazoth.github.io/tags/" > Tags </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://github.com/sramazoth" target="_blank"><span data-feather='github'></span>  </a>
+                </li>
+                
+                <li class="nav-item dark-theme-toggle">
+                    <span class="sr-only dark-theme-toggle-screen-reader-target">theme</span>
+                    <a role="switch">
+                        <span class="theme-toggle-icon" data-feather="moon"></span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+</header>
+<main id="content">
+    <div class="post container">
+    <div class="post-header-section">
+        <h1>Root Galaxy A14</h1>
+
+        
+
+        
+	
+	
+	
+	
+        
+
+	
+
+	
+
+	
+          <small role="doc-subtitle">How to root a Galaxy A14 and use frida on it</small>
+	
+
+	
+          <p class="post-date">
+              
+
+              March 11, 2024
+
+              
+          </p>
+	
+
+        <ul class="post-tags">
+          
+           
+             <li class="post-tag"><a href="https://sramazoth.github.io/tags/android">android</a></li>
+           
+         
+        </ul>
+    </div>
+
+    <div class="post-content">
+        <h1 id="warning">warning</h1>
+<p>The phone is going to be reset two times.
+Ressources :</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=R8-UNyKA6aY">Root All Samsung Galaxy 2023 Android 13</a> : to root the phone</li>
+<li><a href="https://www.youtube.com/watch?v=CHTfYBB-8n0">Samsung Bootloder Unlock Oem Unlock Android 13/14</a> : to deactivate OEM</li>
+</ul>
+<h1 id="requirements">requirements</h1>
+<h2 id="firmware">firmware</h2>
+<p>To find the phone firmware version it&rsquo;s possible to navigate to : <code>settings</code>-&gt;<code>about</code>-&gt;<code>software information</code>-&gt;<code>baseband version</code> : <code>A145RXXU1AWD1</code></p>
+<p>Then we can download the corresponding file from <a href="https://samfw.com/firmware/SM-A145R/SFR/A145RXXU1AWD1">https://samfw.com/firmware/SM-A145R/SFR/A145RXXU1AWD1</a>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>unzip SAMFW.COM_SM-A145R_SFR_A145RXXU1AWD1_fac.zip
+</span></span><span style="display:flex;"><span>ll
+</span></span><span style="display:flex;"><span>-rw-rw-r--. <span style="color:#ae81ff">1</span> pouetpouet pouetpouet <span style="color:#ae81ff">6038610042</span> <span style="color:#ae81ff">18</span> avril 21:00 AP_A145RXXU1AWD1_A145RXXU1AWD1_MQB64354567_REV00_user_low_ship_MULTI_CERT_meta_OS13.tar.md5
+</span></span><span style="display:flex;"><span>-rw-rw-r--. <span style="color:#ae81ff">1</span> pouetpouet pouetpouet    <span style="color:#ae81ff">4014192</span> <span style="color:#ae81ff">18</span> avril 21:00 BL_A145RXXU1AWD1_A145RXXU1AWD1_MQB64354567_REV00_user_low_ship_MULTI_CERT.tar.md5
+</span></span><span style="display:flex;"><span>-rw-rw-r--. <span style="color:#ae81ff">1</span> pouetpouet pouetpouet   <span style="color:#ae81ff">32327789</span> <span style="color:#ae81ff">18</span> avril 21:06 CP_A145RXXU1AWD1_CP24089644_MQB64354567_REV00_user_low_ship_MULTI_CERT.tar.md5
+</span></span><span style="display:flex;"><span>-rw-rw-r--. <span style="color:#ae81ff">1</span> pouetpouet pouetpouet  <span style="color:#ae81ff">507545703</span> <span style="color:#ae81ff">18</span> avril 21:06 CSC_OXM_A145ROXM1AWD1_MQB64354567_REV00_user_low_ship_MULTI_CERT.tar.md5
+</span></span><span style="display:flex;"><span>-rw-rw-r--. <span style="color:#ae81ff">1</span> pouetpouet pouetpouet        <span style="color:#ae81ff">719</span>  <span style="color:#ae81ff">7</span> févr.  <span style="color:#ae81ff">2022</span> _FirmwareInfo_Samfw.com.txt
+</span></span><span style="display:flex;"><span>-rw-rw-r--. <span style="color:#ae81ff">1</span> pouetpouet pouetpouet  <span style="color:#ae81ff">507504748</span> <span style="color:#ae81ff">18</span> avril 21:06 HOME_CSC_OXM_A145ROXM1AWD1_MQB64354567_REV00_user_low_ship_MULTI_CERT.tar.md5
+</span></span></code></pre></div><h2 id="tools">tools</h2>
+<p><code>adb</code>, <code>frida</code> and <code>sdk</code> tools :</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>sudo apt install adb frida android-sdk-build-tools-common
+</span></span></code></pre></div><p><code>odin</code> : <a href="https://forum.xda-developers.com/t/official-samsung-odin-v4-1-2-1-dc05e3ea-for-linux.4453423/">https://forum.xda-developers.com/t/official-samsung-odin-v4-1-2-1-dc05e3ea-for-linux.4453423/</a></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>wget https://forum.xda-developers.com/attachments/odin-zip.5629297/
+</span></span><span style="display:flex;"><span>unzip odin-zip
+</span></span></code></pre></div><p><code>magisk</code> : <a href="https://github.com/topjohnwu/Magisk/">https://github.com/topjohnwu/Magisk/</a></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>wget https://github.com/topjohnwu/Magisk/releases/download/v26.2/Magisk-v26.2.apk
+</span></span></code></pre></div><h1 id="root">root</h1>
+<h2 id="prepare-the-rooted-ap-file">prepare the rooted AP file</h2>
+<ul>
+<li>connect the phone to the PC via USB</li>
+<li>copy <code>magisk</code> apk and <code>AP_A145RXXU1AWD1_[ . . . ]_OS13.tar.md5</code> to the phone</li>
+<li>install <code>magisk</code> apk by clicking on it through the file explorer on the phone and allow installation from non-verified sources</li>
+<li>launch <code>magisk</code> application</li>
+<li>click on <code>install</code> button</li>
+<li>select AP file</li>
+<li>close application when the <code>All done!</code> message appears</li>
+<li>copy generated <code>magisk_patched-[ . . . ].tar</code> file on the phone to the PC</li>
+</ul>
+<h2 id="unlock-the-oem">unlock the OEM</h2>
+<ul>
+<li>activate developer mode on phone :
+<ul>
+<li>click seven times on <code>settings</code>-&gt;<code>about</code>-&gt;<code>software information</code>-&gt;<code>version number</code>, a message should appear to say the mode has been activated</li>
+</ul>
+</li>
+<li>activate <code>OEM unlocking</code> option in <code>settings</code>-&gt;<code>development options</code></li>
+<li>activate <code>USB debugging</code> option in <code>settings</code>-&gt;<code>development options</code></li>
+<li>turn off the phone</li>
+<li>connect the phone to the PC through USB</li>
+<li>keep pressing at the same time buttons <code>volume up</code> and <code>volume down</code> until a warning screen appears</li>
+<li>press for a few seconds on <code>volume up</code> to turn on unlocked OEM mode</li>
+<li>press <code>volume up</code> to confirm</li>
+<li>activate <code>USB debugging</code> in <code>development options</code> when the phone is reinitialized</li>
+</ul>
+<h2 id="install-the-new-firmware">install the new firmware</h2>
+<ul>
+<li>turn off the phone</li>
+<li>connect the phone to the PC through USB</li>
+<li>keep pressing at the same time buttons <code>volume up</code> and <code>volume down</code> until a warning screen appears</li>
+<li>press <code>volume up</code> to continue</li>
+<li>verify that <code>OEM LOCK</code> mode is set to <code>OFF (U)</code></li>
+<li>launch <code>odin</code> on the PC :</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>./odin4 -a magisk_patched-<span style="color:#f92672">[</span> . . . <span style="color:#f92672">]</span>.tar -b BL_A145RXXU1AWD1_A145RXXU1AWD1_MQB64354567_REV00_user_low_ship_MULTI_CERT.tar.md5 -c CP_A145RXXU1AWD1_CP24089644_MQB64354567_REV00_user_low_ship_MULTI_CERT.tar.md5 -s CSC_OXM_A145ROXM1AWD1_MQB64354567_REV00_user_low_ship_MULTI_CERT.tar.md5
+</span></span></code></pre></div><ul>
+<li>if everything works fine, the PC should display a progress number and the phone a progress bar</li>
+<li>follow the phone installation guide</li>
+<li>copy <code>magisk</code> apk to the phone</li>
+<li>install <code>magisk</code> apk by clicking on it through the file explorer on the phone and allow installation from non-verified sources</li>
+<li>launch <code>magisk</code> application</li>
+<li>verify that the button <code>uninstall magisk</code> is present, it confirms that the phone is rooted</li>
+</ul>
+<h2 id="setting-up-phone-for-frida-use">setting up phone for frida use</h2>
+<ul>
+<li>activate developer mode on phone :
+<ul>
+<li>click seven times on <code>settings</code>-&gt;<code>about</code>-&gt;<code>software information</code>-&gt;<code>version number</code>, a message should appear to say the mode has been activated</li>
+</ul>
+</li>
+<li>activate <code>USB debugging</code> option in <code>settings</code>-&gt;<code>development options</code></li>
+<li>on the PC verify that the command <code>adb devices</code> returns <code>[id]    device</code> and not <code>[id]    unauthorized</code></li>
+<li>on the PC :
+<ul>
+<li>detect phone architecture :</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>adb shell getprop ro.product.cpu.abi
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>arm64-v8a
+</span></span></code></pre></div><ul>
+<li>download the corresponding <code>frida-server</code> file : <a href="https://github.com/frida/frida/releases">frida github</a>, for our version <a href="https://github.com/frida/frida/releases/download/16.1.3/frida-server-16.1.3-android-arm64.xz">frida-server-16.1.3-android-arm64.xz</a></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>wget https://github.com/frida/frida/releases/download/16.1.3/frida-server-16.1.3-android-arm64.xz
+</span></span><span style="display:flex;"><span>xz -d frida-server-16.1.3-android-arm64.xz
+</span></span><span style="display:flex;"><span>mv frida-server-16.1.3-android-arm64 frida-server
+</span></span></code></pre></div><ul>
+<li>puish <code>frida-server</code> file to the phone :</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>adb push frida-server /data/local/tmp
+</span></span></code></pre></div><ul>
+<li>get a shell on the phone :</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>adb shell
+</span></span></code></pre></div></li>
+<li>allow <code>shell</code> service to run as <code>superuser</code> on the phone, to do so activate <code>com.android.shell</code> in <code>magisk</code> application in <code>Super-User</code> window</li>
+<li>execute <code>frida-server</code> on the PC :
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>adb shell
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>su
+</span></span><span style="display:flex;"><span>cd /data/local/tmp
+</span></span><span style="display:flex;"><span>chmod <span style="color:#ae81ff">755</span> frida-server
+</span></span><span style="display:flex;"><span>./frida-server
+</span></span><span style="display:flex;"><span>exit
+</span></span><span style="display:flex;"><span>exit
+</span></span><span style="display:flex;"><span>frida-ps -U
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>gives a list of services running on the phone<span style="color:#f92672">]</span>
+</span></span></code></pre></div></li>
+</ul>
+
+        
+    </div>
+
+    <div class="prev-next">
+        
+    </div>
+
+    
+    
+        <svg id="btt-button" class="arrow-logo" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512" onclick="scrollToTop()" title="Go to top">
+    
+    <path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/>
+</svg>
+<script>
+    let backToTopButton = document.getElementById("btt-button");
+
+    window.onscroll = function() {
+        scrollFunction()
+    };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            backToTopButton.style.display = "block";
+        } else {
+            backToTopButton.style.display = "none";
+        }
+    }
+
+    function scrollToTop() {
+        window.scrollTo(0, 0);
+    }
+</script>
+
+    
+    
+</div>
+
+
+
+    
+
+        </main><footer class="footer">
+    
+    
+
+    
+
+    
+
+    
+
+    <span>
+        Made with &#10084;&#65039; using <a target="_blank" href="https://github.com/gokarna-theme/gokarna-hugo">Gokarna</a>
+    </span>
+</footer>
+</body>
+</html>

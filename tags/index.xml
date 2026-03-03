@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on sramazoth</title>
+    <link>https://sramazoth.github.io/tags/</link>
+    <description>Recent content in Tags on sramazoth</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 03 Mar 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://sramazoth.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Network</title>
+      <link>https://sramazoth.github.io/tags/network/</link>
+      <pubDate>Tue, 03 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>https://sramazoth.github.io/tags/network/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Python</title>
+      <link>https://sramazoth.github.io/tags/python/</link>
+      <pubDate>Tue, 03 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>https://sramazoth.github.io/tags/python/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Reverse</title>
+      <link>https://sramazoth.github.io/tags/reverse/</link>
+      <pubDate>Tue, 03 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>https://sramazoth.github.io/tags/reverse/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>List</title>
+      <link>https://sramazoth.github.io/tags/list/</link>
+      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://sramazoth.github.io/tags/list/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Manhwa</title>
+      <link>https://sramazoth.github.io/tags/manhwa/</link>
+      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://sramazoth.github.io/tags/manhwa/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>C</title>
+      <link>https://sramazoth.github.io/tags/c/</link>
+      <pubDate>Thu, 20 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://sramazoth.github.io/tags/c/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Android</title>
+      <link>https://sramazoth.github.io/tags/android/</link>
+      <pubDate>Mon, 11 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://sramazoth.github.io/tags/android/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Network on sramazoth</title>
+    <link>https://sramazoth.github.io/tags/network/</link>
+    <description>Recent content in Network on sramazoth</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 03 Mar 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://sramazoth.github.io/tags/network/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Breaking ETIC Telecom IPL-DEC-220</title>
+      <link>https://sramazoth.github.io/posts/2026_etic_break/</link>
+      <pubDate>Tue, 03 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>https://sramazoth.github.io/posts/2026_etic_break/</guid>
+      <description>informations Probably linked to this CVE : https://nvd.nist.gov/vuln/detail/CVE-2022-3703&#xA;Which equipment : ETIC IPL-DEC-220 (website link)&#xA;source : https://www.etictelecom.com/wp-content/uploads/2019/03/IPL-DEC-220-LE-272x490.png.webp&#xA;Some IP addresses have been changed and screenshots may use french but sources are shown.&#xA;recon TCP network scan :&#xA;Network scan&#xA;Webpage on 80 Home page on port 80&#xA;The page is basic, two links are present and redirect to :&#xA;https://10.0.0.1//common.etic_cgi_portal/login.html https://10.0.0.1:4433/login.html Network scan didn&amp;rsquo;t find port 4433 because of my options which were very basic.</description>
+    </item>
+    <item>
+      <title>Setting and using scapy mitm</title>
+      <link>https://sramazoth.github.io/posts/2024-03-11_setting_and_using_scapy_mitm/</link>
+      <pubDate>Mon, 11 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://sramazoth.github.io/posts/2024-03-11_setting_and_using_scapy_mitm/</guid>
+      <description>requirements two physical network interfaces : ip a 1: lo: [ . . . ] 2: eth0: &amp;lt;NO-CARRIER,BROADCAST,MULTICAST,UP&amp;gt; mtu 1500 qdisc fq_codel state DOWN group default qlen 1000 link/ether 50:81:40:78:96:ac brd ff:ff:ff:ff:ff:ff 3: eth1: &amp;lt;NO-CARRIER,BROADCAST,MULTICAST,UP&amp;gt; mtu 1500 qdisc fq_codel state DOWN group default qlen 1000 link/ether 50:81:40:88:85:bd brd ff:ff:ff:ff:ff:ff scapy is installed and working (already done if using kali) two equipments talking to each other using a physical network (server and client on the sketch), I&amp;rsquo;m not doing wireless mitm here it might be useful to disable NetworkManager to avoid interfaces to go off : sudo systemctl disable NetworkManager sudo systemctl stop NetworkManager sketch Mitm setup</description>
+    </item>
+  </channel>
+</rss>

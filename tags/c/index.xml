@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>C on sramazoth</title>
+    <link>https://sramazoth.github.io/tags/c/</link>
+    <description>Recent content in C on sramazoth</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 20 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://sramazoth.github.io/tags/c/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Little binary to reverse</title>
+      <link>https://sramazoth.github.io/posts/2023-05-20_little_reverse_challenge/</link>
+      <pubDate>Thu, 20 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://sramazoth.github.io/posts/2023-05-20_little_reverse_challenge/</guid>
+      <description>The challenge is available here: my github&#xA;The code has 5 functions :&#xA;main : main function called when binary is executed. jacky_tunning_banniere : do nothing but showing a cool banner at binary launch. uncipher_file : will uncipher a file with the secret_key (hardcoded :p). est_ce_une_bonne_cle : check whether or not the key is correct. regex_match : function to use regex (totally not taken online). Binary has some options available, but not given that easily (strings).</description>
+    </item>
+  </channel>
+</rss>
